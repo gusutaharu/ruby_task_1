@@ -42,13 +42,14 @@ elsif memo_type == 2
   edit_memo = gets.to_s
 
   if File.exist?("#{edit_memo}.csv")
-    
+      
       memo_contents = CSV.read("#{edit_memo}.csv")
-    
+      
+      puts "メモの内容"
       puts memo_contents
     
       puts "追記内容を記入してくささい"
-       puts "完了したら Ctr + Dをおします"
+      puts "完了したら Ctr + Dをおします"
     
       add_memo_contents = readlines
     
